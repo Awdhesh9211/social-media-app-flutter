@@ -62,6 +62,7 @@ class _HomePageState extends State<HomePage> {
           }
 
           if (postStates is PostLoading || postStates is PostUploading) {
+            postCubit.fetchAllPosts(); 
             return const Center(child: Text("Loading posts..."));
           }
 

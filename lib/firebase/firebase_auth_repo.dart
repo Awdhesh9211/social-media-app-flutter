@@ -8,7 +8,8 @@ class FirebaseAuthRepo implements AuthRepo {
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
 
   @override
-  Future<AppUser?> registerWithEmailPassword(String name, String email, String password) async {
+  Future<AppUser?> registerWithEmailPassword(
+      String name, String email, String password) async {
     try {
       // Attempt to create user
       UserCredential userCredential = await firebaseAuth
@@ -71,10 +72,8 @@ class FirebaseAuthRepo implements AuthRepo {
   }
   // logout cant access the instance.currentUser
 
-
   @override
   Future<AppUser?> getCurrenUser() async {
-
     // logged in user
     final firebaseUser = firebaseAuth.currentUser;
     // not logged in
@@ -95,5 +94,4 @@ class FirebaseAuthRepo implements AuthRepo {
         name: userDoc['name']);
   }
   // loggedIn ? AppUser(uid,name,email) : null
-
 }

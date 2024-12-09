@@ -12,6 +12,7 @@ import 'package:mediasocial/cubits/auth_cubit.dart';
 import 'package:mediasocial/entities/models/post.dart';
 import 'package:mediasocial/cubits/post_cubit.dart';
 import 'package:mediasocial/cubits/states/post_states.dart';
+import 'package:mediasocial/pages/home/home_page.dart';
 import 'package:mediasocial/pages/responsive/constrained_scaffold.dart';
 import 'package:permission_handler/permission_handler.dart';
 
